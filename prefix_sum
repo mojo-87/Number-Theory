@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int presum()
+{
+    int n;
+    cin>>n;
+    vector<int> prefix,original;
+    for(int i=0; i<n; i++)
+    {
+        cin>>prefix[i];
+    }
+    original[0]=prefix[0];
+    for(int i=1; i<n; i++)
+    {
+        original[i]=prefix[i]-prefix[i-1];
+    }
+
+    for(int x:original)
+    {
+        cout<< x <<" ";
+    }
+}
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    presum();
+
+}
